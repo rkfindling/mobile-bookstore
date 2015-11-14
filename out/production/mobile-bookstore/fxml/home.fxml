@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet ../css/main.css?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.9999000000025" prefWidth="579.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.findling.mobileBookstore.controller.home">
+  <children>
+    <Label id="titleLabel" fx:id="titleLabelFX" layoutX="240.0" layoutY="22.0" text="Mobile Bookstore" textOverrun="CLIP">
+      <font>
+        <Font name="Times New Roman Bold" size="13.0" />
+      </font>
+    </Label>
+    <Button fx:id="btnRefresh" layoutX="30.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleRefreshBookListWindow" text="Refresh" />
+    <CheckBox layoutX="114.0" layoutY="395.0" mnemonicParsing="false" text="CheckBox" />
+    <ListView id="NewBookListWindow" fx:id="NewBookListWindowFX" layoutX="347.0" layoutY="301.0" prefHeight="112.0" prefWidth="218.0" />
+    <TableView editable="true" layoutX="30.0" layoutY="45.0" prefHeight="312.0" prefWidth="453.0">
+      <columns>
+        <TableColumn id="col_IDFX" fx:id="col_IDFX" maxWidth="5000.0" minWidth="10.0" prefWidth="66.0" text="ID" />
+        <TableColumn id="col_ISBNFX" fx:id="col_IDFX" prefWidth="75.0" text="ISBN" />
+        <TableColumn id="col_TitleFX" fx:id="col_IDFX" maxWidth="5000.0" minWidth="10.0" prefWidth="220.0" text="Title" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>

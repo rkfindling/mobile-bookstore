@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet ../css/main.css?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.9999000000025" prefWidth="579.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.findling.mobileBookstore.controller.home">
+  <children>
+    <Label id="titleLabel" fx:id="titleLabelFX" layoutX="240.0" layoutY="22.0" text="Mobile Bookstore" textOverrun="CLIP">
+      <font>
+        <Font name="Times New Roman Bold" size="13.0" />
+      </font>
+    </Label>
+    <Button fx:id="btnRefresh" layoutX="30.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleRefreshBookListWindow" text="Refresh" />
+    <CheckBox layoutX="114.0" layoutY="395.0" mnemonicParsing="false" text="CheckBox" />
+    <TextArea id="BookListTextArea" fx:id="BookListTextAreaFX" layoutX="310.0" layoutY="58.0" prefHeight="312.0" prefWidth="233.0" wrapText="true" />
+    <TableView id="BookListWindow" editable="true" layoutX="40.0" layoutY="58.0" prefHeight="298.0" prefWidth="242.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="Column X" />
+        <TableColumn prefWidth="75.0" text="Column Y" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>
