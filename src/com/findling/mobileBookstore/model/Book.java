@@ -1,13 +1,22 @@
 package com.findling.mobileBookstore.model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.Set;
 
 /**
  * Created by Ralph on 2015-10-27.
  */
 public class Book {
-    protected int mBookID;
-    protected String mISBN;
+    //protected int mBookID;
+    //protected String mISBN;
+
+    private  int mBookID;
+    private  String mISBN;
+
     protected String mTitle;
     //protected float mActualCost;
     protected float mMemberPrice;
@@ -15,7 +24,7 @@ public class Book {
    // protected Set<String> mFormats; // Like paperback, hardcover, Kindle, ePub, MP3, etc.
 
     public Book(int bookID, String ISBN, String title, /*Set<String> formats, float actualCost, */float memberPrice, float retailPrice ) {
-        mBookID =bookID;
+        mBookID = bookID;
         mISBN = ISBN;
         mTitle = title;
         //mFormats = formats;
@@ -53,6 +62,10 @@ public class Book {
         mBookID = bookID;
     }
 
+   // public IntegerProperty bookIDProperty() {
+   //     return mBookID;
+   // }
+
 /*
     public Set<String> getFormats() {
         return
@@ -74,6 +87,14 @@ public class Book {
 
         mISBN = ISBN;
     }
+
+
+/*
+    public StringProperty bookISBNProperty() {
+        return mISBN;
+    }
+*/
+
 
     public float getMemberPrice() {
 
@@ -104,6 +125,11 @@ public class Book {
         mTitle = title;
     }
 
+    /**
+     * The data as an observable list of Persons.
+     */
+    private ObservableList<Book> BookData = FXCollections.observableArrayList();
+
 
     @Override
     public String toString() {
@@ -117,5 +143,13 @@ public class Book {
                 ", mRetailPrice=" + mRetailPrice +
 
                 '}';
+    }
+
+    /**
+     * Returns the data as an observable list of Persons.
+     * @return
+     */
+    public ObservableList<Book> getBookData() {
+        return BookData;
     }
 }
